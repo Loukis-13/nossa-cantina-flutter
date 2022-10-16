@@ -1,0 +1,11 @@
+[
+    {"name": "Maçã", "price": 2.0, "img": "assets/fundo/4.jpg"},
+    {"name": "Pera", "price": 2.0, "img": "assets/fundo/0.jpg"},
+    {"name": "Amora", "price": 2.0, "img": "assets/fundo/1.jpg"},
+    {"name": "Maçã", "price": 2.0, "img": "assets/fundo/8.jpg"},
+    {"name": "Maçã", "price": 2.0, "img": "assets/fundo/3.jpg"},
+    {"name": "Maçã", "price": 2.0, "img": "assets/fundo/4.jpg"},
+    {"name": "Maçã", "price": 2.0, "img": "assets/fundo/9.jpg"},
+    {"name": "Maçã", "price": 2.0, "img": "assets/fundo/6.jpg"},
+    {"name": "Maçã", "price": 2.0, "img": "assets/fundo/7.jpg"}
+]
