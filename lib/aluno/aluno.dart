@@ -25,7 +25,12 @@ class _AlunoState extends State<Aluno> {
             icon: const Icon(Icons.shopping_basket),
             tooltip: "Pedidos",
             onPressed: () => Navigator.pushNamed(context, "/carrinho"),
-          )
+          ),
+          IconButton(
+            icon: const Icon(Icons.power_settings_new),
+            tooltip: "Sair",
+            onPressed: () => Navigator.popAndPushNamed(context, "/auth"),
+          ),
         ],
       ),
       drawer: const AlunoMenu(),

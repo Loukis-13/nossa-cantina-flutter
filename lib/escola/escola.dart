@@ -19,6 +19,13 @@ class _EscolaState extends State<Escola> {
         title: const Text("NOSSA CANTINA"),
         centerTitle: true,
         foregroundColor: Colors.white,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.power_settings_new),
+            tooltip: "Sair",
+            onPressed: () => Navigator.popAndPushNamed(context, "/auth"),
+          )
+        ],
       ),
       body: Column(
         children: [

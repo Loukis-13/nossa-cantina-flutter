@@ -11,6 +11,7 @@ class Entrar extends StatefulWidget {
 
 class _EntrarState extends State<Entrar> {
   final _formKey = GlobalKey<FormState>();
+  var email = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -24,6 +25,7 @@ class _EntrarState extends State<Entrar> {
             runSpacing: 20,
             children: [
               TextFormField(
+                controller: email,
                 decoration: const InputDecoration(labelText: "E-mail"),
               ),
               TextFormField(
@@ -51,7 +53,13 @@ class _EntrarState extends State<Entrar> {
               SizedBox(
                 height: 35,
                 child: ElevatedButton(
-                  onPressed: () => Navigator.popAndPushNamed(context, "/escola"),
+                  onPressed: () {
+                    if (email.text == "aluno") {
+                      Navigator.popAndPushNamed(context, "/aluno");
+                    } else if (email.text == "escola") {
+                      Navigator.popAndPushNamed(context, "/escola");
+                    }
+                  },
                   child: const Text(
                     "ENTRAR",
                     style: TextStyle(color: Colors.white),
