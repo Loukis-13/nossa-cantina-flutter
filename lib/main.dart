@@ -1,29 +1,26 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:nossa_cantina/escola/escola.dart';
 import 'package:provider/provider.dart';
 
-import 'providers/produtos.dart';
-import 'providers/token.dart';
-import 'aluno/aluno.dart';
-import 'authentication/authentication.dart';
-import 'aluno/carrinho.dart';
-import 'sobre/sobre.dart';
+import 'firebase_options.dart';
+import 'screens/aluno/aluno.dart';
+import 'screens/aluno/carrinho.dart';
+import 'screens/authentication/authentication.dart';
+import 'screens/escola/escola.dart';
+import 'screens/providers/produtos.dart';
+import 'screens/sobre/sobre.dart';
 
-void main() => runApp(MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => Token()),
-        ChangeNotifierProvider(create: (_) => Produtos()),
-      ],
-      child: const MyApp(),
-    ));
+Future<void> main() async {
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider(create: (_) => Produtos()),
+    ],
+    child: MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Nossa Cantina',
       theme: ThemeData(
@@ -41,14 +38,14 @@ class MyApp extends StatelessWidget {
         }),
         textTheme: GoogleFonts.ubuntuTextTheme(),
       ),
-      initialRoute: '/auth',
+      initialRoute: 'auth',
       routes: {
-        '/auth': (context) => const Authentication(),
-        '/aluno': (context) => const Aluno(),
-        '/carrinho': (context) => const Carrinho(),
-        '/escola': (context) => const Escola(),
-        '/sobre': (context) => const Sobre(),
+        'auth': (context) => const Authentication(),
+        'aluno': (context) => const Aluno(),
+        'carrinho': (context) => const Carrinho(),
+        'escola': (context) => const Escola(),
+        'sobre': (context) => const Sobre(),
       },
-    );
-  }
+    ),
+  ));
 }

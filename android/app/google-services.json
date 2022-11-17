@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "491091201515",
+    "project_id": "nossa-cantina",
+    "storage_bucket": "nossa-cantina.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:491091201515:android:9fdc436c68cc5d48b81dae",
+        "android_client_info": {
+          "package_name": "com.example.nossa_cantina"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "491091201515-f55a1f1u73nd19vulkmlo2ol6q5jge7o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCunPUIcp7HNHEgtYQJFy_vK0yTGlGTP_4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "491091201515-f55a1f1u73nd19vulkmlo2ol6q5jge7o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
